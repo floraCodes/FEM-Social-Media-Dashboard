@@ -71,7 +71,7 @@ ul {
 html {
   overflow: hidden;
   font-size: 14px;
-  font-family: "Inter";
+  font-family: 'Inter';
 }
 
 /* ### header ### */
@@ -79,6 +79,7 @@ html {
 header {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  margin: 0.5rem 0 1rem 0;
 }
 
 header > h1 {
@@ -95,6 +96,14 @@ header > p {
   align-self: center;
 }
 
+.red-num {
+  color: var(--Bright-Red);
+  font-weight: 700;
+}
+.green-num {
+  color: var(--Lime-Green);
+  font-weight: 700;
+}
 /* ### body ### */
 
 body {
@@ -119,7 +128,8 @@ article:hover {
 .social-media-followers-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1.2rem;
+  gap: 1.8rem;
+  padding-bottom: 3rem;
 }
 
 .social-media-followers-container > article {
@@ -140,12 +150,9 @@ article:hover {
   padding-bottom: 1.3rem;
 }
 
-.social-media-followers-container > article :nth-child(4) {
-}
-
 .social-media-handler > p,
 .main-number,
-.social-media-followers-container > article :nth-child(4),
+.overview-number,
 h2 {
   font-weight: 800;
 }
@@ -156,14 +163,47 @@ h2 {
 }
 
 /* ### overview container ### */
+h2 {
+  margin-bottom: 1.5rem;
+}
 
 .overview-components-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1.2rem;
+  gap: 1.8rem;
 }
 
 .overview-components-container > article {
+  padding: 0;
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 1rem;
+  align-content: space-between;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.overview-components-container > article :nth-child(1),
+.overview-components-container > article :nth-child(3) {
+  justify-self: start;
+  padding-left: 1.8rem;
+}
+.overview-components-container > article :nth-child(2),
+.overview-components-container > article :nth-child(4) {
+  justify-self: end;
+  padding-right: 1.8rem;
+}
+.overview-components-container > article :nth-child(1),
+.overview-components-container > article :nth-child(2) {
+  align-self: start;
+  padding-top: 1.7rem;
+}
+.overview-components-container > article :nth-child(3),
+.overview-components-container > article :nth-child(4) {
+  align-self: end;
+  padding-bottom: 1.7rem;
+}
+.overview-number {
+  font-size: 2rem;
 }
